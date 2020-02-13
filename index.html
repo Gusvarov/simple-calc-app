@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="open-calc">
+        <button class="open">Open Calc</button>
+        <button class="close">Close Calc</button>
+    </div>
+    <div class="container">
+        <div class="wrapper display-none">
+        <h2>Simple Calc</h2>
+            <div class="inner-container">
+                <div class="checkboxes">
+                    <input type="checkbox" class="checkbox">
+                    <input type="checkbox" class="checkbox">
+                    <input type="checkbox" class="checkbox">
+                </div>
+                <div>
+                    <div class="inner-wrapper">
+                        <input type="text" class="number-field first-num" placeholder="input . . .">
+                        <input type="text" class="number-field second-num">
+                        <input type="text" class="number-field third-num">
+                    </div>
+                    <div class="inner-wrapper">
+                        <input type="text" class="number-field first-num">
+                        <input type="text" class="number-field second-num">
+                        <input type="text" class="number-field third-num">
+                    </div>
+                    <div class="inner-wrapper">
+                        <input type="text" class="number-field first-num">
+                        <input type="text" class="number-field second-num">
+                        <input type="text" class="number-field third-num">
+                    </div>
+                </div>
+                <div class="results">
+                    <div class="result">Results</div>
+                    <div class="number">Number</div>
+                    <div class="number">Number</div>
+                    <div class="number">Number</div>
+                </div>
+            </div>
+            <div class="calculation">
+                <h2>Choose Box</h2>
+                <div class="calc-wrapper">
+                    <label for="sum">
+                        <input type="radio" class="radio-btn" name="radio" id="sum"><span>Sum</span>
+                    </label>
+                    <label for="multiply">
+                        <input type="radio" name="radio" class="radio-btn" id="multiply"><span>Multiply</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
