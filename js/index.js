@@ -15,20 +15,44 @@ const thirdSection = [firstNum[2], secondNum[2], thirdNum[2]];
 
 sum.addEventListener('change', () => {
     let firstSum = firstSection.reduce((total,item) => total + +item.value, 0);
-    numbers[0].innerHTML = firstSum;
+    if(isNaN(firstSum) || firstSum === 0) {
+        numbers[0].innerHTML = `Please, enter valid number`;
+    } else {
+        numbers[0].innerHTML = firstSum;
+    }
     let secondSum = secondSection.reduce((total,item) => total + +item.value, 0);
-    numbers[1].innerHTML = secondSum;
+    if(isNaN(secondSum) || secondSum === 0) {
+        numbers[1].innerHTML = `Please, enter valid number`;
+    } else {
+        numbers[1].innerHTML = secondSum;
+    }
     let thirdSum = thirdSection.reduce((total,item) => total + +item.value, 0);
-    numbers[2].innerHTML = thirdSum;
+    if(isNaN(thirdSum) || thirdSum === 0) {
+        numbers[2].innerHTML = `Please, enter valid number`;
+    } else {
+        numbers[2].innerHTML = thirdSum;
+    }
 })
 
 multiply.addEventListener('change', () => {
     let firstMultiply = firstSection.reduce((total,item) => total * item.value, 1);
-    numbers[0].innerHTML = firstMultiply;
-    let secondSum = secondSection.reduce((total,item) => total * item.value, 1);
-    numbers[1].innerHTML = secondSum;
-    let thirdSum = thirdSection.reduce((total,item) => total * item.value, 1);
-    numbers[2].innerHTML = thirdSum;
+    if(isNaN(firstMultiply) || firstMultiply === 0) {
+        numbers[0].innerHTML = `Please, enter valid number and more than 0`;
+    } else {
+        numbers[0].innerHTML = firstMultiply;
+    }
+    let secondMultiply = secondSection.reduce((total,item) => total * item.value, 1);
+    if(isNaN(secondMultiply) || secondMultiply === 0) {
+        numbers[1].innerHTML = `Please, enter valid number and more than 0`;
+    } else {
+        numbers[1].innerHTML = secondMultiply;
+    }
+    let thirdMultiply = thirdSection.reduce((total,item) => total * item.value, 1);
+    if(isNaN(thirdMultiply) || thirdMultiply === 0) {
+        numbers[2].innerHTML = `Please, enter valid number and more than 0`;
+    } else {
+        numbers[2].innerHTML = thirdMultiply;
+    }
 })
 
 checkBox[0].addEventListener('click', () => innerWrapper[0].classList.toggle('green'));
