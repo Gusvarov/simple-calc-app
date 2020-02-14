@@ -5,6 +5,7 @@ const firstNum = document.querySelectorAll('.first-num');
 const secondNum = document.querySelectorAll('.second-num');
 const thirdNum = document.querySelectorAll('.third-num');
 const checkBox = document.querySelectorAll('.checkbox');
+const innerWrapper = document.querySelectorAll('.inner-wrapper');
 const sum = document.querySelector('#sum');
 const multiply = document.querySelector('#multiply');
 const numbers = document.querySelectorAll('.number');
@@ -29,6 +30,12 @@ multiply.addEventListener('change', () => {
     let thirdSum = thirdSection.reduce((total,item) => total * item.value, 1);
     numbers[2].innerHTML = thirdSum;
 })
+
+checkBox[0].addEventListener('click', () => innerWrapper[0].classList.toggle('green'));
+
+checkBox[1].addEventListener('click', () => innerWrapper[1].classList.toggle('green'));
+
+checkBox[2].addEventListener('click', () => innerWrapper[2].classList.toggle('green'));
 
 function toggleModal() {
     wrapper.classList.toggle('display-none');
